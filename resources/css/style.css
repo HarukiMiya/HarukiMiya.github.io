@@ -1,0 +1,527 @@
+/*-----------------Basic Setup-------------------*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: "Hannari", 'Noto Sans JP', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix{zoom: 1}
+.clearfix:after{
+    content:'.';
+    clear: both;
+    display: block;
+    height:0;
+    visibility: hidden;
+}
+
+/*-------------------REUSABLE COMPONENTS-------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.box{
+    padding: 1%;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url(img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 22%;
+}
+
+/*-----------------Headings--------------------*/
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after{
+    display:block;
+    height: 2px;
+    background-color: #00ff00;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h1.header{
+    font-family: "Hannari"; 
+}
+
+
+h2.history{
+    color:#fff;
+    text-align: center;
+}
+
+h3.history{
+    color: #fff;
+    text-align: center;
+    font-family: "Hannari";
+}
+
+/*-----------History-----------*/
+
+.section-history{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.45)), url(img/history.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    
+}
+
+.long-copy-history{
+    text-align: center;
+    color: #fff;
+    line-height: 145%;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+/*----------PARAGRAPH----------*/
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*-----------ICONS-------------*/
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.icon-small{
+    display:inline-block;
+    width:30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120;
+    margin-right: 10px;
+    
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -4px;
+    
+}
+
+
+/*-------------Header---------------*/
+
+.main-nav{
+    float: right;
+    list-style:none;
+    margin-top: 50px;
+    
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 5px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #00ff00;
+}
+
+/*---------------Itoshima----------------*/
+section-itoshima .long-copy{
+    margin-bottom: 40px;
+}
+
+/*-----------------Sightseeing/ryokan------------------*/
+.box img{
+    width:230px;
+    height:230px;
+    margin-bottom:15px;
+}
+
+.sightseeing-feature{
+    margin-bottom: 5px;
+}
+
+
+/*--------------Sightseeing Photos----------------*/ 
+
+.section-sightseeing{
+    padding: 0;
+}
+
+.photos-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.photos-showcase li{
+    display:block;
+    float:left;
+    width: 25%;
+}
+
+.sightseeing-photos{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.sightseeing-photos img{
+    opacity: 63%;
+    width: 100%;
+    height: 300px;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: trasform 0.5s;
+    transition: trasform 0.5s;
+}
+
+.sightseeing-photos img:hover{
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/*--------------shizen------------*/
+
+.section-shizen{
+    background-color: #f4f4f4;
+}
+
+.long-copy-shizen{
+    color: #555;
+    text-align: center;
+}
+
+
+.fox img{
+    width:370px;
+    height:370px;
+    margin-bottom:15px;
+    margin-top: 100px;
+}
+
+/*-----------------food---------------*/
+
+.long-copy-food{
+    text-align: center;
+}
+
+.row{
+    text-align: center;
+}
+
+.css-cube {                                      /* 立体の大きさ傾きの指定 */
+  width: 100px;
+  height: 250px;
+  margin: 10%;
+    margin-bottom: -3%;
+  border: none;
+  transform-style: preserve-3d;                  /* ３Ｄで表示 */
+  transform:rotateY(-30deg) rotateX(-30deg) rotateZ(10deg); /* 立体の傾き */
+  display : inline-block;
+  animation: cubeAnime 2s linear infinite;       /* 動きの指定 */
+}
+@keyframes cubeAnime{                            /* 回転方向の指定 */
+   50% { transform: rotateY(-30deg) rotateX(-30deg) rotateZ(10deg);}
+  100% { transform: rotateY(-30deg) rotateX(330deg) rotateZ(370deg);}
+}
+.css-face {                                      /* 各面の指定 */
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  line-height: 200px;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  backface-visibility :hidden;                 /* 裏面を表示 */
+}
+.css-forward {                                   /* 前面の指定 */
+  background: silver;
+  transform: translateZ(100px);
+}
+.css-reverse {                                   /* 後面の指定 */
+  background: lime;
+  transform: rotateY(180deg) translateZ(100px);
+}
+.css-right {                                     /* 右面の指定 */
+  background: red;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.css-left {                                      /* 左面の指定 */
+  background: aqua;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.css-top {                                       /* 上面の指定 */
+  background: yellow;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.css-bottom {                                    /* 下面の指定 */
+  background: fuchsia;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.align img{
+    width: 200px;
+    height: 200px;
+}
+
+/*----------------Hanabi------------------*/
+h2.hanabi{
+    color: #fff;
+}
+
+.section-hanabi{
+    background-image: url(img/hanabi.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    
+}
+
+.long-copy-hanabi{
+    font-size: 35px;
+    font-family: "Hannari";
+    text-align: center;
+    color: #fff;
+    line-height: 145%;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+.long-copy-hanabi-date{
+    color: #fff;
+    margin-top: 18%;
+    margin-left: 5%;
+}
+
+/*----------------------------ryokan--------------------------*/
+
+.last{
+    background-image: url(img/last.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+h1.last-sentence{
+    font-family: "Hannari";
+    margin-top: 20%;
+    text-align: center;
+}
+
+/*-----------BUTTONS------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #00bf00;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #00bf00;
+    border: 2px solid #00bf00;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+.button{
+    text-align: center;
+}
+
+
+/*-----------------FOOTER------------------*/
+
+footer{
+    background-color: #333;
+    padding: 40px;
+    font-size:80%;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;   
+}
+
+.footer-nav li,
+.social-links li{
+    display:inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right:0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border:0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color:#ddd;
+}
+
+.social-links li a:link,
+.social-link li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+
+.ion-social-facebook:hover{
+    color: #3b5998;
+}
+.ion-social-twitter:hover{
+    color: #00aced;
+}
+.ion-social-googleplus:hover{
+    color: #dd4b39;
+}
+.ion-social-instagram:hover{
+    color: #517fa4;
+}
+
+
+footer p{
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
