@@ -7,19 +7,30 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" text="text/css" href="vendors/css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="resources/js/script.js"></script>
         <title>Itoshima</title>
     </head>
+    
     <body>
+        <div id="loading">
+            <div id="loading-box">
+                <div class="loading-anime animation-loading">
+                    <p class="loading-txt">Loading</p>
+                </div>
+            </div>
+        </div>
         <header>
             <nav>
                 <div class="row">
                     <ul class="main-nav">
-                        <li><a href="#">歴史</a></li>
-                        <li><a href="#">観光スポット</a></li>
-                        <li><a href="#">自然</a></li>
-                        <li><a href="#">食彩</a></li>
-                        <li><a href="#">花火</a></li>
-                        <li><a href="#">旅館</a></li>
+                        <li id="introBtn">紹介</li>
+                        <li id="historyBtn">歴史</li>
+                        <li id="sightseeingBtn">観光スポット</li>
+                        <li id="natureBtn">自然</li>
+                        <li id="foodBtn">食彩</li>
+                        <li id="hanabiBtn">花火</li>
+                        <li id="ryokanBtn">旅館</li>
                     </ul>
                 </div>
             </nav>
@@ -28,7 +39,7 @@
             </div>
         </header>
         
-        <section class="section-itoshima">
+        <section class="section-itoshima" id="intro">
             <div class="row">
                 <h2>糸島ってどんなところ？</h2>
                 <p class="long-copy">
@@ -67,7 +78,7 @@
             </div>
         </section>
         
-        <section class="section-history">
+        <section class="section-history" id="history">
             <div class="text-history">
                 <h2 class="history">歴史</h2>
                 <h3 class="history">史跡を訪ね、いにしえの姿を目にとどめる</h3>
@@ -76,7 +87,8 @@
                 </p>
             </div>
         </section>
-        <section class="sightseeing">
+        
+        <section class="sightseeing" id="sightseeing">
             <div class="row">
                 <h2>観光スポット</h2>
             </div>
@@ -111,11 +123,12 @@
                 </div>
             </div>
         </section>
+        
         <section class="section-sightseeing">
             <ul class="photos-showcase clearfix">
                 <li>
                     <figure class="sightseeing-photos">
-                        <img src="resources/img/1keyanodaimon.jpg" alt="1">
+                        <img src="resources/img/1keyanodaimon.jpg" alt="1" >
                     </figure>
                 </li>
                 <li>
@@ -157,10 +170,11 @@
                 </li>
             </ul>
         </section>
-        <section class="section-shizen">
+        
+        <section class="section-nature" id="nature">
             <div class="row">
                 <h2>自然の遊園地</h2>
-                <p class="long-copy-shizen">穏やかな波が流れ、潮風が気持ちよく、美女たちを眺めながらBBQもできる、海。<br>マイナスイオンを体全体、毛穴全開で感じられる、ジブリのモデルとされそうな、山。<br>流しそうめんや、ヤマメの塩焼きなどが堪能できる、渓谷。様々な自然の恩恵を受けられる。自然の遊園地かつ美女の楽園だ。</p>
+                <p class="long-copy-nature">穏やかな波が流れ、潮風が気持ちよく、美女たちを眺めながらBBQもできる、海。<br>マイナスイオンを体全体、毛穴全開で感じられる、ジブリのモデルとされそうな、山。<br>流しそうめんや、ヤマメの塩焼きなどが堪能できる、渓谷。様々な自然の恩恵を受けられる。自然の遊園地かつ美女の楽園だ。</p>
             </div>
             <div class="row">
                 <div class="col span-1-of-3 fox">
@@ -174,7 +188,8 @@
                 </div>
             </div>
         </section>
-        <section class="section-food">
+        
+        <section class="section-food" id="food">
             <div class="row">
                 <h2>食彩</h2>
                 <p class="long-copy-food">おいしさの宝庫とも呼ばれている糸島。<br>伝統の技を守り続けられた醤油、ハム・ウィンナーの加工品、農産物、海産物など、新鮮な食材があふれている。</p>
@@ -188,7 +203,8 @@
                 </div>
             </div>
         </section>
-        <section class="section-hanabi">
+        
+        <section class="section-hanabi" id="hanabi">
             <h2 class="hanabi">花火大会</h2>
             <p class="long-copy-hanabi">
                 空を見上げて前向きな気持ちになって欲しい。
@@ -196,7 +212,8 @@
             <p class="long-copy-hanabi-date">06/01/20 サプライズ花火in芥屋海岸
             </p>
         </section>
-        <section class="section-ryokan">
+        
+        <section class="section-ryokan" id="ryokan">
             <h2>旅館</h2>
             <div class="row">
                 <div class="col span-1-of-4 box">
@@ -245,6 +262,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="last">
             <h1 class="last-sentence">僕と共に自然にかこまれ、癒されよう</h1>
             <div class="button">
@@ -252,6 +270,7 @@
                 <a class="btn btn-ghost" href="#">癒されない</a>
             </div>
         </section>
+        
         <section class="section-form">
             <div class="row">
                 <h2>お問い合わせ</h2>
@@ -297,10 +316,10 @@
                     </div>
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label>お問い合わせ内容</label>
+                            <label for="message">お問い合わせ内容</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="ご自由にご記入ください"></textarea>
+                            <textarea name="message" placeholder="ご自由にご記入ください" id="message"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -314,6 +333,11 @@
                 </form>
             </div>
         </section>
+        
+        <section class="top-page">
+            <p class="toTop">ページトップへ</p>
+        </section>
+        
         <footer>
             <div class="row">
                 <div class="col span-1-of-2">
@@ -341,7 +365,4 @@
             </div>
         </footer>
     </body>
-    
-    
-    
 </html>
