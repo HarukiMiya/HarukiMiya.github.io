@@ -1,13 +1,13 @@
 
-$(window).on('load',function(){
+
+$(document).ready(function(){
     // Fix the screen at loading page
     $('body,html').css({
         overflow: "hidden",
         height: '100%'
     });
     $("#loading").delay(4500).fadeOut('slow');
-});
-$(document).ready(function(){
+    
     // Release when the loading is done
     setTimeout(function(){
         $('body,html').css({
