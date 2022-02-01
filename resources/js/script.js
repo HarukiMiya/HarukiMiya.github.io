@@ -7,10 +7,10 @@ $(document).ready(function(){
     
     // hide hero-text until loaded
     $('.hero-text-box').hide();
-    $("#loading").delay(4500).fadeOut('slow');
+    $("#loading").delay(6500).fadeOut('slow');
     setTimeout(function(){
         $('.hero-text-box').show();
-    }, 4500);
+    }, 6500);
     
     // Release when the loading is done
     setTimeout(function(){
@@ -18,7 +18,7 @@ $(document).ready(function(){
             overflow: "auto",
             height: 'auto'
         });
-      }, 5500);
+      }, 7500);
     // make a text bold when click an inquiry blank
     $("input, textarea, #find-us").focus(function() {
         $("label[for='" + this.id + "']").css("font-weight","bold");
