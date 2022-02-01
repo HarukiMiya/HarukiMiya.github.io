@@ -1,12 +1,16 @@
-
-
 $(document).ready(function(){
     // Fix the screen at loading page
     $('body,html').css({
         overflow: "hidden",
         height: '100%'
     });
+    
+    // hide hero-text until loaded
+    $('.hero-text-box').hide();
     $("#loading").delay(4500).fadeOut('slow');
+    setTimeout(function(){
+        $('.hero-text-box').show();
+    }, 4500);
     
     // Release when the loading is done
     setTimeout(function(){
